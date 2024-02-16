@@ -1,19 +1,25 @@
-import EMPLOYEE from './employee';
+import logo from './logo.svg';
+import './App.css';
+import EmployeeInfo from './Employees/EmployeeInfo';
+import Employees from './Employees/Employees';
+import NewEmployee from './Employees/NewEmployee';
+import { useState } from 'react';
+import EmployeeForm from './Employees/EmployeeForm';
+import { EmployeeContext } from './Employees/employee-context';
+import EmployeeContextProvider from './Employees/employee-context';
 
-function App() {
-  const emp=[
-    {id:'e1',name:'QWE',dob:new Date(1989,3,4),exp:6},
-    {id:'e2',name:'QWER',dob:new Date(1992,7,16),exp:7},
-    {id:'e3',name:'QWERT',dob:new Date(1988,9,12),exp:8},
-    {id:'e4',name:'QWERTY',dob:new Date(1986,2,7),exp:9},
-]
 
+const App = () => {
 
   return (
-    <div>
-    <EMPLOYEE emplo={emp}/>
-    </div>
+    <EmployeeContextProvider >
+      <div>
+        <NewEmployee>
+          <EmployeeForm />
+        </NewEmployee>
+        <Employees />
+      </div>
+    </EmployeeContextProvider>
   );
 }
-
 export default App;

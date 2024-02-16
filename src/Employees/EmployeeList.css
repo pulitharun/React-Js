@@ -1,0 +1,9 @@
+.employee-list {
+    list-style: none;
+    padding: 0;
+}
+
+.employee-list__fallback {
+    color: white;
+    text-align: center;
+}

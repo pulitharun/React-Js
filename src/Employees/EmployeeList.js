@@ -1,5 +1,5 @@
 import EmployeeInfo from "./EmployeeInfo";
-import './ExpenseList.css'
+import './EmployeeList.css'
 
 const EmployeeList = props => {
 

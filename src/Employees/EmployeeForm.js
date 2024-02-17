@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import './ExpenseForm.css'
+import './EmployeeForm.css'
 
 import { useContext } from 'react';
 import { ExmployeeContext } from './employee-context';
 import { useDispatch } from 'react-redux';
+import { employeeActions} from '../Store';
 
 const EmployeeForm = (props) => {
 
@@ -38,7 +39,10 @@ const EmployeeForm = (props) => {
         //console.log(employeeData);
         // props.onSaveEmployeeData(employeeData);
         //onSaveEmployeeData(employeeData);
-        dispatch({type:"ADD_EMPLOYEE", payload: employeeData});
+        //dispatch({type:"ADD_EMPLOYEE", payload: employeeData});
+        dispatch(employeeActions.addEmployee(employeeData));
+
+
 
         setEnteredName('');
         setEnteredExpi('');

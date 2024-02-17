@@ -1,5 +1,5 @@
 import EmployeeDate from './EmployeeDate';
-import './ExpenseItem.css'
+import './EmployeeInfo.css'
 import Card from '../UI/Card';
 import React, { useState } from 'react';
 
